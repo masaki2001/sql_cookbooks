@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: cookbooks
--- Generation Time: 2024-02-24 11:00:01.1920
+-- Generation Time: 2024-02-25 15:27:06.3660
 -- -------------------------------------------------------------
 
 
@@ -20,50 +20,50 @@
 
 DROP TABLE IF EXISTS `dept`;
 CREATE TABLE `dept` (
-  `DEPTNO` int NOT NULL,
-  `DNAME` varchar(50) NOT NULL,
-  `LOC` varchar(50) NOT NULL
+  `deptno` int NOT NULL,
+  `dname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `loc` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `emp`;
 CREATE TABLE `emp` (
-  `EMPNO` int NOT NULL,
-  `ENAME` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `JOB` varchar(255) DEFAULT NULL,
-  `MGR` int DEFAULT NULL,
-  `HIREDATE` varchar(255) NOT NULL,
-  `SAL` int NOT NULL,
-  `COMM` int DEFAULT NULL,
-  `DEPTNO` int NOT NULL
+  `empno` int NOT NULL,
+  `ename` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `job` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `mgr` int DEFAULT NULL,
+  `hiredate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sal` int NOT NULL,
+  `comm` int DEFAULT NULL,
+  `deptino` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t1`;
 CREATE TABLE `t1` (
-  `ID` int NOT NULL
+  `id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t10`;
 CREATE TABLE `t10` (
-  `ID` int NOT NULL
+  `id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t100`;
 CREATE TABLE `t100` (
-  `ID` int NOT NULL
+  `id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t500`;
 CREATE TABLE `t500` (
-  `ID` int NOT NULL
+  `id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `dept` (`DEPTNO`, `DNAME`, `LOC`) VALUES
+INSERT INTO `dept` (`deptno`, `dname`, `loc`) VALUES
 (10, 'ACCOUNTING', 'NEW YORK'),
 (20, 'RESEARCH', 'DALLAS'),
 (30, 'SALES', 'CHICAGO'),
 (40, 'OPERACTIONS', 'BOSTON');
 
-INSERT INTO `emp` (`EMPNO`, `ENAME`, `JOB`, `MGR`, `HIREDATE`, `SAL`, `COMM`, `DEPTNO`) VALUES
+INSERT INTO `emp` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptino`) VALUES
 (7369, 'SMITH', 'CLERK', 7902, '17-DEC-2005', 800, NULL, 20),
 (7499, 'ALLEN', 'SALESMAN', 7698, '20-FEB-2006', 1600, 300, 30),
 (7521, 'WARD', 'SALESMAN', 7698, '22-FEB-2006', 1250, 500, 30),
@@ -79,10 +79,10 @@ INSERT INTO `emp` (`EMPNO`, `ENAME`, `JOB`, `MGR`, `HIREDATE`, `SAL`, `COMM`, `D
 (7902, 'FORD', 'ANALYST', 7566, '03-DEC-2006', 3000, NULL, 20),
 (7934, 'MILLER', 'CLERK', 7782, '23-JAN-2007', 1300, NULL, 10);
 
-INSERT INTO `t1` (`ID`) VALUES
+INSERT INTO `t1` (`id`) VALUES
 (1);
 
-INSERT INTO `t10` (`ID`) VALUES
+INSERT INTO `t10` (`id`) VALUES
 (1),
 (2),
 (3),
@@ -94,7 +94,7 @@ INSERT INTO `t10` (`ID`) VALUES
 (9),
 (10);
 
-INSERT INTO `t100` (`ID`) VALUES
+INSERT INTO `t100` (`id`) VALUES
 (1),
 (2),
 (3),
@@ -196,7 +196,7 @@ INSERT INTO `t100` (`ID`) VALUES
 (99),
 (100);
 
-INSERT INTO `t500` (`ID`) VALUES
+INSERT INTO `t500` (`id`) VALUES
 (1),
 (2),
 (3),
