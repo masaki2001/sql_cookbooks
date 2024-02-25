@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: cookbooks
--- Generation Time: 2024-02-25 15:27:06.3660
+-- Generation Time: 2024-02-25 16:33:57.8560
 -- -------------------------------------------------------------
 
 
@@ -34,7 +34,7 @@ CREATE TABLE `emp` (
   `hiredate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `sal` int NOT NULL,
   `comm` int DEFAULT NULL,
-  `deptino` int NOT NULL
+  `deptno` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t1`;
@@ -63,7 +63,7 @@ INSERT INTO `dept` (`deptno`, `dname`, `loc`) VALUES
 (30, 'SALES', 'CHICAGO'),
 (40, 'OPERACTIONS', 'BOSTON');
 
-INSERT INTO `emp` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptino`) VALUES
+INSERT INTO `emp` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno`) VALUES
 (7369, 'SMITH', 'CLERK', 7902, '17-DEC-2005', 800, NULL, 20),
 (7499, 'ALLEN', 'SALESMAN', 7698, '20-FEB-2006', 1600, 300, 30),
 (7521, 'WARD', 'SALESMAN', 7698, '22-FEB-2006', 1250, 500, 30),
