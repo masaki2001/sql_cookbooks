@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: cookbooks
--- Generation Time: 2024-02-25 16:33:57.8560
+-- Generation Time: 2024-03-03 21:16:22.0450
 -- -------------------------------------------------------------
 
 
@@ -35,6 +35,13 @@ CREATE TABLE `emp` (
   `sal` int NOT NULL,
   `comm` int DEFAULT NULL,
   `deptno` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `emp_bonus`;
+CREATE TABLE `emp_bonus` (
+  `empno` int NOT NULL,
+  `received` varchar(50) NOT NULL,
+  `type` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `t1`;
@@ -78,6 +85,11 @@ INSERT INTO `emp` (`empno`, `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `d
 (7900, 'JAMES', 'CLERK', 7698, '03-DEC-2006', 950, NULL, 30),
 (7902, 'FORD', 'ANALYST', 7566, '03-DEC-2006', 3000, NULL, 20),
 (7934, 'MILLER', 'CLERK', 7782, '23-JAN-2007', 1300, NULL, 10);
+
+INSERT INTO `emp_bonus` (`empno`, `received`, `type`) VALUES
+(7369, '14-MAR-2015', 1),
+(7900, '14-MAR-2015', 2),
+(7788, '14-MAR-2015', 3);
 
 INSERT INTO `t1` (`id`) VALUES
 (1);
